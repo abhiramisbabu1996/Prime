@@ -867,15 +867,15 @@ class ProjectProject(models.Model):
 			'name': result['name'] or False,
 			'location': vals['location_id'] or False,
 			'user_id': vals['partner_id'] or False,
-			'no_stories': vals['no_story'] or False,
-			'area_limit': vals['area'] or False,
+			# 'no_stories': vals['no_story'] or False,
+			# 'area_limit': vals['area'] or False,
 			'dob':dob,
-			'bldng_direction': vals['face_direction'] or False,
+			# 'bldng_direction': vals['face_direction'] or False,
 			'manager': vals['user_id'] or False,
-			'latitude': vals['latitude'] or False,
-			'longitude': vals['longitude'] or False,
+			# 'latitude': vals['latitude'] or False,
+			# 'longitude': vals['longitude'] or False,
 			'project_category': vals['project_category'] or False,
-			'branch': vals['company_id'] or False,
+			# 'branch': vals['company_id'] or False,
 		})
 		result['job_assignment'] = rec.id
 		return result

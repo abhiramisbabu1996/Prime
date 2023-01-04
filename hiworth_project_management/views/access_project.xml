@@ -91,8 +91,8 @@
 							<field name="project_category" String="Partner"/>
 							<field name="location_id" string="Project Location" required="True" />
 						<field name="user_id" string="Project Manager" colspan="2"
-							   attrs="{'readonly':[('state','in',['close', 'cancelled'])]}" required="1"
-							   context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'project.group_project_manager']}" options="{'no_create':1}"/>
+							    required="1"
+							   />
 <!--							<field name="building_nature"/>-->
 <!--							<field name="status_pro" invisible="1"/>-->
 <!--							<field name="project_count" invisible="1"/>-->
@@ -425,9 +425,9 @@
 						</field>
 					</page>
 				</xpath>
-				<xpath expr="//header//button[@name='set_cancel']" position="after">
-					<button name="reopen_project" string="Add SubProject" type="object" class="oe_highlight" confirm="Are You Sure To Reopen This Project??" groups="base.group_erp_manager,hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager" states="open" attrs="{'invisible':[('inv_button','=',True)]}" />
-				</xpath>
+<!--				<xpath expr="//header//button[@name='set_cancel']" position="after">-->
+<!--					<button name="reopen_project" string="Add SubProject" type="object" class="oe_highlight" confirm="Are You Sure To Reopen This Project??" groups="base.group_erp_manager,hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager" states="open" attrs="{'invisible':[('inv_button','=',True)]}" />-->
+<!--				</xpath>-->
 			</field>
 		</record>
 
