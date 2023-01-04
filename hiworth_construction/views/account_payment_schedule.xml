@@ -22,23 +22,23 @@
 						<field name="partner_id" on_change="onchange_partner_id(partner_id)" string="Customer"/>
 					</group>
 					<notebook>
-						<page string="Payment Schedule">
-							<field name="schedule_id">
-								<tree editable="bottom">
-									<field name="sequence" widget="handle" />
-									<field name="seq" required="True" />
-									<field name="name" required="True" />
-									<field name="amount" sum="Total" />
-									<field name="due_on" />
-									<field name="stage_total" readonly="True" />
-								</tree>
-							</field>
+<!--						<page string="Payment Schedule">-->
+<!--							<field name="schedule_id">-->
+<!--								<tree editable="bottom">-->
+<!--									<field name="sequence" widget="handle" />-->
+<!--									<field name="seq" required="True" />-->
+<!--									<field name="name" required="True" />-->
+<!--									<field name="amount" sum="Total" />-->
+<!--									<field name="due_on" />-->
+<!--									<field name="stage_total" readonly="True" />-->
+<!--								</tree>-->
+<!--							</field>-->
 
-							<group>
-								<field name="schedule_note" nolabel="1" placeholder="Note....." />
+<!--							<group>-->
+<!--								<field name="schedule_note" nolabel="1" placeholder="Note....." />-->
 
-							</group>
-						</page>
+<!--							</group>-->
+<!--						</page>-->
 					</notebook>
 				</form>
 			</field>

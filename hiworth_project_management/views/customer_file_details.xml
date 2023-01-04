@@ -94,9 +94,9 @@
 			<field name="act_window_id" ref="action_customer_file_details" />
 		</record>		
 
-		<menuitem name="Customer File Details" id="menu_customer_file_details" parent="menu_office_management" sequence="5" groups="hiworth_project_management.group_employee,hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_architect,hiworth_project_management.group_am_office,hiworth_project_management.group_dgm"/>
+<!--		<menuitem name="Customer File Details" id="menu_customer_file_details" parent="menu_office_management" sequence="5" groups="hiworth_project_management.group_employee,hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_architect,hiworth_project_management.group_am_office,hiworth_project_management.group_dgm"/>-->
 
-		<menuitem name="My Own File Details" id="menu_customer_file_details_sub" parent="menu_customer_file_details" sequence="5" action="action_customer_file_details" groups="hiworth_project_management.group_employee,hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_architect,hiworth_project_management.group_am_office,hiworth_project_management.group_dgm"/>
+<!--		<menuitem name="My Own File Details" id="menu_customer_file_details_sub" parent="menu_customer_file_details" sequence="5" action="action_customer_file_details" groups="hiworth_project_management.group_employee,hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_architect,hiworth_project_management.group_am_office,hiworth_project_management.group_dgm"/>-->
 
 		<record id="view_customer_file_transfer_details_tree" model="ir.ui.view">
 			<field name="name">customer.filetransfer.details.tree</field>
@@ -157,7 +157,7 @@
 			<field name="act_window_id" ref="action_customer_file_transfer_details" />
 		</record>		
 
-		<menuitem name="Transferred File Details" id="menu_customer_file_details_sub_menu" parent="menu_customer_file_details" sequence="10" action="action_customer_file_transfer_details" groups="hiworth_project_management.group_employee,hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_architect,hiworth_project_management.group_am_office,hiworth_project_management.group_dgm"/>
+<!--		<menuitem name="Transferred File Details" id="menu_customer_file_details_sub_menu" parent="menu_customer_file_details" sequence="10" action="action_customer_file_transfer_details" groups="hiworth_project_management.group_employee,hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_architect,hiworth_project_management.group_am_office,hiworth_project_management.group_dgm"/>-->
 
 		<record model="ir.actions.act_window" id="action_customer_my_own_details">
 			<field name="name">My Own File Details</field>
@@ -322,7 +322,7 @@
 		</record>
 	
 
-		<menuitem name="Pending Files" id="menu_customer_file_detailspending_sub_menu" parent="menu_customer_file_details" sequence="15" action="action_customerpending_file_transfer_details"/>
+<!--		<menuitem name="Pending Files" id="menu_customer_file_detailspending_sub_menu" parent="menu_customer_file_details" sequence="15" action="action_customerpending_file_transfer_details"/>-->
 		<!--<menuitem name="Pending Files" id="menu_customer_file_detailspending_sub_menu_employeecategory" parent="menu_project_management_employee_file_details" sequence="15" action="action_customerpending_file_transfer_details" />-->
 
 		<record id="view_res_partner_filter_inherit" model="ir.ui.view">

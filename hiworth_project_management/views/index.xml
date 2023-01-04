@@ -163,24 +163,24 @@
 										</group>
 									</group>
 								</page>
-								<page string="Payment Schedule">
-									<group string="Payment Schedule">
-										<field name="schedule_id" nolabel="1" readonly="1">
-											<tree editable="bottom">
-												<field name="sequence" widget="handle" />
-												<field name="seq" required="True" />
-												<field name="name" required="True" />
-												<field name="amount" sum="Total" />
-												<field name="due_on" />
-												<field name="stage_total" readonly="True" />
+<!--								<page string="Payment Schedule">-->
+<!--									<group string="Payment Schedule">-->
+<!--										<field name="schedule_id" nolabel="1" readonly="1">-->
+<!--											<tree editable="bottom">-->
+<!--												<field name="sequence" widget="handle" />-->
+<!--												<field name="seq" required="True" />-->
+<!--												<field name="name" required="True" />-->
+<!--												<field name="amount" sum="Total" />-->
+<!--												<field name="due_on" />-->
+<!--												<field name="stage_total" readonly="True" />-->
 
-											</tree>
-										</field>
-									</group>
-									<group>
-										<field name="schedule_note" nolabel="1" placeholder="Note....." readonly="1" />
-									</group>
-								</page>
+<!--											</tree>-->
+<!--										</field>-->
+<!--									</group>-->
+<!--									<group>-->
+<!--										<field name="schedule_note" nolabel="1" placeholder="Note....." readonly="1" />-->
+<!--									</group>-->
+<!--								</page>-->
 							</notebook>
 						</page>
 
@@ -217,18 +217,18 @@
                                      To invoice or setup invoicing and renewal options, go to the related contract:
                                      <field name="analytic_account_id" readonly="1" required="0" class="oe_inline" nolabel="1"/>.
                                  </p> -->
-								<group name="group_alias" attrs="{'invisible': [('alias_domain', '=', False)]}">
-									<label for="alias_name" string="Email Alias"/>
-									<div name="alias_def">
-										<field name="alias_id" class="oe_read_only oe_inline" string="Email Alias" required="0"/>
-										<div class="oe_edit_only oe_inline" name="edit_alias" style="display: inline;">
-											<field name="alias_name" class="oe_inline"/>@<field name="alias_domain" class="oe_inline" readonly="1"/>
-										</div>
-									</div>
-									<label for="alias_model" string="Incoming Emails create"/>
-									<field name="alias_model" class="oe_inline" nolabel="1"/>
-									<field name="alias_contact" class="oe_inline" string="Accept Emails From"/>
-								</group>
+<!--								<group name="group_alias" attrs="{'invisible': [('alias_domain', '=', False)]}">-->
+<!--									<label for="alias_name" string="Email Alias"/>-->
+<!--									<div name="alias_def">-->
+<!--										<field name="alias_id" class="oe_read_only oe_inline" string="Email Alias" required="0"/>-->
+<!--										<div class="oe_edit_only oe_inline" name="edit_alias" style="display: inline;">-->
+<!--											<field name="alias_name" class="oe_inline"/>@<field name="alias_domain" class="oe_inline" readonly="1"/>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<label for="alias_model" string="Incoming Emails create"/>-->
+<!--									<field name="alias_model" class="oe_inline" nolabel="1"/>-->
+<!--									<field name="alias_contact" class="oe_inline" string="Accept Emails From"/>-->
+<!--								</group>-->
 							</group>
 							<group>
 								<group col="5">

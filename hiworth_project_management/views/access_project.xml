@@ -87,57 +87,64 @@
 					<group string="Project Details" >
 						<group>
 							<field name="start_date"/>
-							<field name="building_nature"/>
-							<field name="status_pro" invisible="1"/>
-							<field name="project_count" invisible="1"/>
-							<field name="no_story"/>
-							<field name="face_direction"/>
-						</group>
-						<group>
-							<field name="area"/>
-							<field name="plote_data"/>
-							<field name="initial_meeting_date"/>
 							<field name="date_end"/>
-							<field name="keywords" widget="many2many_tags" string="Keywords/Tags"/>
-							<field name="sup_project_description" attrs="{'invisible':[('is_subproject','!=',True)]}"/>
+							<field name="project_category" String="Partner"/>
+							<field name="location_id" string="Project Location" required="True" />
+						<field name="user_id" string="Project Manager" colspan="2"
+							   attrs="{'readonly':[('state','in',['close', 'cancelled'])]}" required="1"
+							   context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'project.group_project_manager']}" options="{'no_create':1}"/>
+<!--							<field name="building_nature"/>-->
+<!--							<field name="status_pro" invisible="1"/>-->
+<!--							<field name="project_count" invisible="1"/>-->
+<!--							<field name="no_story"/>-->
+<!--							<field name="face_direction"/>-->
+						</group>
+						<group>
+<!--							<field name="area"/>-->
+<!--							<field name="plote_data"/>-->
+<!--							<field name="initial_meeting_date"/>-->
+<!--							<field name="date_end"/>-->
+<!--							<field name="keywords" widget="many2many_tags" string="Keywords/Tags"/>-->
+<!--							<field name="sup_project_description" attrs="{'invisible':[('is_subproject','!=',True)]}"/>-->
+<!--						-->
 						</group>
 					</group>
-					<group string="Plot Details">
-						<group>
-							<field name="survey_no"/>
-							<field name="extend"/>
-							<field name="village"/>
-							<field name="taluk"/>
-							<field name="district"/>
-							<field name="ward_no"/>
-							<field name="building_no"/>
-						</group>
-						<group>
-							<field name="deed_no"/>
-							<field name="type_of_deed"/>
-							<field name="sub_registrar_office"/>
-							<field name="permit_authority"/>
-							<field name="local_body"/>
+<!--					<group string="Plot Details">-->
+<!--						<group>-->
+<!--							<field name="survey_no"/>-->
+<!--							<field name="extend"/>-->
+<!--							<field name="village"/>-->
+<!--							<field name="taluk"/>-->
+<!--							<field name="district"/>-->
+<!--							<field name="ward_no"/>-->
+<!--							<field name="building_no"/>-->
+<!--						</group>-->
+<!--						<group>-->
+<!--							<field name="deed_no"/>-->
+<!--							<field name="type_of_deed"/>-->
+<!--							<field name="sub_registrar_office"/>-->
+<!--							<field name="permit_authority"/>-->
+<!--							<field name="local_body"/>-->
 							<field name="inv_button" invisible="1"/>
-						</group>
-					</group>
-					<group string="Permit Details">
-						<group>
-							<field name="file_submitted_on"/>
-							<field name="permit_no"/>
-							<field name="permit_date"/>
-							<label for="permit_from" string="permit Validity"/>
-							<div>From
-								<field name="permit_from" class="oe_inline"/>To
-								<field name="permit_to" class="oe_inline"/>
-							</div>
-						</group>
-						<group>
-							<field name="fire_noc"/>
-							<field name="fire_noc_remark" attrs="{'invisible':[('fire_noc','=',False)]}"/>
-							<field name="other_permits"/>
-						</group>
-					</group>
+<!--						</group>-->
+<!--					</group>-->
+<!--					<group string="Permit Details">-->
+<!--						<group>-->
+<!--							<field name="file_submitted_on"/>-->
+<!--							<field name="permit_no"/>-->
+<!--							<field name="permit_date"/>-->
+<!--							<label for="permit_from" string="permit Validity"/>-->
+<!--							<div>From-->
+<!--								<field name="permit_from" class="oe_inline"/>To-->
+<!--								<field name="permit_to" class="oe_inline"/>-->
+<!--							</div>-->
+<!--						</group>-->
+<!--						<group>-->
+<!--							<field name="fire_noc"/>-->
+<!--							<field name="fire_noc_remark" attrs="{'invisible':[('fire_noc','=',False)]}"/>-->
+<!--							<field name="other_permits"/>-->
+<!--						</group>-->
+<!--					</group>-->
 				</xpath>
 			</field>
 		</record>
@@ -235,61 +242,61 @@
 				<xpath expr="//group/group[1]" position="replace">
 					<group groups="hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.work_description_group,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_dgm,hiworth_project_management.group_am_office">
 						<field name="year" invisible="1"/>
-						<field name="co_applicants">
-							<tree editable="bottom">
-								<field name="project_id" invisible="1"/>
-								<field name="name"/>
-							</tree>
-						</field>
-						<label for="house_name" string="Address"/>
-						<div>
-							<field name="house_name" placeholder="House Name" />
-							<field name="street" placeholder="House Name" />
-							<field name="street2" placeholder="Post Office" />
-							<field name="city" placeholder="City" />
-							<field name="state_id" placeholder="State" options="{'no_create':1}" />
-							<field name="country_id" options="{'no_create':1}" placeholder="Country" />
-						</div>
+<!--						<field name="co_applicants">-->
+<!--							<tree editable="bottom">-->
+<!--								<field name="project_id" invisible="1"/>-->
+<!--								<field name="name"/>-->
+<!--							</tree>-->
+<!--						</field>-->
+<!--						<label for="house_name" string="Address"/>-->
+<!--						<div>-->
+<!--							<field name="house_name" placeholder="House Name" />-->
+<!--							<field name="street" placeholder="House Name" />-->
+<!--							<field name="street2" placeholder="Post Office" />-->
+<!--							<field name="city" placeholder="City" />-->
+<!--							<field name="state_id" placeholder="State" options="{'no_create':1}" />-->
+<!--							<field name="country_id" options="{'no_create':1}" placeholder="Country" />-->
+<!--						</div>-->
 					</group>
 				</xpath>
-				<xpath expr="//group" position="after">
-					<group groups="hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.work_description_group,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_dgm,hiworth_project_management.group_am_office">
-						<separator string="Google Map Location"/>
-						<group col="6">
-							<field name="latitude"/>
-							<field name="longitude"/>
-							<button type="object" name="show_google_map" string="show-in-google-maps" class="oe_highlight"/>
-						</group>
-						<group>
-							<field name="dob"/>
-						</group>
-						<group>
-							<div class="oe_inline">
-								<label for="contact1" string="Contact Number Of Customer"/>
-								<field name="contact1" class="oe_inline" style="width:450px;" />/
-								<field name="contact2" class="oe_inline" style="width:450px;"/>
-							</div>
-						</group>
-					</group>
-					<group>
-						<field name="customer_email" string="Customer UserID"/>
-						<field name="user_part_id" invisible="1"/>
+<!--				<xpath expr="//group" position="after">-->
+<!--					<group groups="hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.work_description_group,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_dgm,hiworth_project_management.group_am_office">-->
+<!--						<separator string="Google Map Location"/>-->
+<!--						<group col="6">-->
+<!--							<field name="latitude"/>-->
+<!--							<field name="longitude"/>-->
+<!--							<button type="object" name="show_google_map" string="show-in-google-maps" class="oe_highlight"/>-->
+<!--						</group>-->
+<!--						<group>-->
+<!--							<field name="dob"/>-->
+<!--						</group>-->
+<!--						<group>-->
+<!--							<div class="oe_inline">-->
+<!--								<label for="contact1" string="Contact Number Of Customer"/>-->
+<!--								<field name="contact1" class="oe_inline" style="width:450px;" />/-->
+<!--								<field name="contact2" class="oe_inline" style="width:450px;"/>-->
+<!--							</div>-->
+<!--						</group>-->
+<!--					</group>-->
+<!--					<group>-->
+<!--						<field name="customer_email" string="Customer UserID"/>-->
+<!--						<field name="user_part_id" invisible="1"/>-->
 
-						<field name="customer" invisible="1"/> <!-- Boolean -->
-						<field name="customer_nick_name" attrs="{'invisible':[('customer','=',True)]}"/>
-						<field name="job_assignment" invisible="1"/>
-						<field name="company_id" options="{'no_create':1}" string="Branch" />
-						<field name="inactive_project"/>
-						<field name="is_subproject" invisible="1"/>
-						<field name="parent_project" attrs="{'invisible':[('is_subproject','=',False)]}"/>
-						<field name="project_category"/>
-						<field name="location_id" string="Project Location"
-							   required="True" />
-						<field name="user_id" string="Project Manager" colspan="2"
-							   attrs="{'readonly':[('state','in',['close', 'cancelled'])]}" required="1"
-							   context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'project.group_project_manager']}" options="{'no_create':1}"/>
-					</group>
-				</xpath>
+<!--						<field name="customer" invisible="1"/> &lt;!&ndash; Boolean &ndash;&gt;-->
+<!--						<field name="customer_nick_name" attrs="{'invisible':[('customer','=',True)]}"/>-->
+<!--						<field name="job_assignment" invisible="1"/>-->
+<!--						<field name="company_id" options="{'no_create':1}" string="Branch" />-->
+<!--						<field name="inactive_project"/>-->
+<!--						<field name="is_subproject" invisible="1"/>-->
+<!--						<field name="parent_project" attrs="{'invisible':[('is_subproject','=',False)]}"/>-->
+<!--						<field name="project_category"/>-->
+<!--						<field name="location_id" string="Project Location"-->
+<!--							   required="True" />-->
+<!--						<field name="user_id" string="Project Manager" colspan="2"-->
+<!--							   attrs="{'readonly':[('state','in',['close', 'cancelled'])]}" required="1"-->
+<!--							   context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'project.group_project_manager']}" options="{'no_create':1}"/>-->
+<!--					</group>-->
+<!--				</xpath>-->
 
 
 				<xpath expr="//page[1]" position="attributes">
@@ -353,40 +360,43 @@
 				<xpath expr="//page[@string='Work Report']" position="attributes">
 					<attribute name="invisible">1</attribute>
 				</xpath>
-				<xpath expr="//page[@string='Estimation']" position="after">
-					<page string="Work Reports">
-						<field name="work_reports">
-							<tree>
-								<field name="date_today"/>
-								<field name="report"/>
-								<field name="notes"/>
+<!--				<xpath expr="//page[@string='Estimation']" position="after">-->
+<!--					<page string="Work Reports">-->
+<!--						<field name="work_reports">-->
+<!--							<tree>-->
+<!--								<field name="date_today"/>-->
+<!--								<field name="report"/>-->
+<!--								<field name="notes"/>-->
 
-							</tree>
-						</field>
-						<field name="work_report_man" invisible="1"/>
-					</page>
-					<page string="Drawings">
-						<button string="Add Image" type="object" name="add_image"/>
-						<field name="site_image" domain="[('gallery','=',False)]" mode="kanban" create="false" widget="many2many_kanban" edit="false">
+<!--							</tree>-->
+<!--						</field>-->
+<!--						<field name="work_report_man" invisible="1"/>-->
+<!--					</page>-->
+<!--					<page string="Drawings">-->
+<!--						<button string="Add Image" type="object" name="add_image"/>-->
+<!--						<field name="site_image" domain="[('gallery','=',False)]" mode="kanban" create="false" widget="many2many_kanban" edit="false">-->
 
-					</field>
+<!--					</field>-->
 
 
-					</page>
-					<page string="Gallery">
-						<group string="Gallery">
-							<field name="drawing_sheet" nolabel="1">
-								<tree editable="bottom">
-									<field name="name"/>
-									<field name="datas"/>
-								</tree>
-							</field>
-						</group>
-					</page>
+<!--					</page>-->
+<!--					<page string="Gallery">-->
+<!--						<group string="Gallery">-->
+<!--							<field name="drawing_sheet" nolabel="1">-->
+<!--								<tree editable="bottom">-->
+<!--									<field name="name"/>-->
+<!--									<field name="datas"/>-->
+<!--								</tree>-->
+<!--							</field>-->
+<!--						</group>-->
+<!--					</page>-->
+<!--				</xpath>-->
+				<xpath expr="//page[@string='Other Info']" position="attributes">
+					<attribute name="invisible">1</attribute>
 				</xpath>
-				<xpath expr="//page[@string='Payment Schedule']" position="attributes">
-					<attribute name="groups">project.group_project_manager,hiworth_construction.group_project_management_user,hiworth_project_management.group_user,hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager</attribute>
-				</xpath>
+<!--				<xpath expr="//page[@string='Payment Schedule']" position="attributes">-->
+<!--					<attribute name="groups">project.group_project_manager,hiworth_construction.group_project_management_user,hiworth_project_management.group_user,hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager</attribute>-->
+<!--				</xpath>-->
 				<xpath expr="//page[@string='Modifications']" position="attributes">
 					<attribute name="invisible">1</attribute>
 				</xpath>
@@ -441,15 +451,15 @@
 				  action="hiworth_construction.action_view_work_order" name="Work Order" sequence="10" groups="hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_contractor,base.group_erp_manager"/>
 
 
-		<menuitem name="Contracting" id="base.menu_main_pm"
-				  groups="hiworth_construction.group_estimation_user,hiworth_project_management.group_admin2,hiworth_project_management.group_dgm"
-				  sequence="4000" />
+<!--		<menuitem name="Contracting" id="base.menu_main_pm"-->
+<!--				  groups="hiworth_construction.group_estimation_user,hiworth_project_management.group_admin2,hiworth_project_management.group_dgm"-->
+<!--				  sequence="4000" />-->
 
 		<menuitem id="hiworth_construction.menu_document_details_under_project" parent="base.menu_main_pm"
 				  name="Directory Management" sequence="5" groups="base.group_erp_manager"/>
 
-		<menuitem action="hiworth_construction.open_view_project_all_list" id="project.menu_projects"
-				  name="Sub Projects" parent="project.menu_project_management" sequence="3" groups="hiworth_project_management.group_manager_office,hiworth_project_management.group_user,base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_am_office,hiworth_project_management.group_dgm" />
+<!--		<menuitem action="hiworth_construction.open_view_project_all_list" id="project.menu_projects"-->
+<!--				  name="Sub Projects" parent="project.menu_project_management" sequence="3" groups="hiworth_project_management.group_manager_office,hiworth_project_management.group_user,base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_am_office,hiworth_project_management.group_dgm" />-->
 
 		<record id="hiworth_construction.action_view_task_list" model="ir.actions.act_window">
 			<field name="name">Tasks</field>

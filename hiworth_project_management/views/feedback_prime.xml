@@ -145,10 +145,11 @@
         </record>
 
 
-         <menuitem id="menu_feedback_prime" name=" CustomerFeedbacks"
-            parent="hiworth_project_management.menu_office_management" sequence="140"/>
+<!--         <menuitem id="menu_feedback_prime" name=" CustomerFeedbacks"-->
+<!--            parent="hiworth_project_management.menu_office_management" sequence="140"/>-->
 
-             <menuitem action="action_feedback_prime" id="sub_menu_feedback_prime" name="Customer Feedbacks"
-            parent="menu_feedback_prime" sequence="140" groups="base.group_erp_manager,hiworth_project_management.group_user,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager"/>
-</data>
+<!--             <menuitem action="action_feedback_prime" id="sub_menu_feedback_prime" name="Customer Feedbacks"-->
+<!--            parent="menu_feedback_prime" sequence="140" groups="base.group_erp_manager,hiworth_project_management.group_user,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager"/>-->
+
+	</data>
 </openerp>

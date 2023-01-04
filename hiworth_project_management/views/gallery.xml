@@ -90,9 +90,10 @@
 		</record>
 
 
-		<menuitem id="main_menu_gallery_project" name="Gallery" sequence="35" groups="base.group_erp_manager,hiworth_project_management.group_manager_office,hiworth_project_management.group_user,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_dgm"/>
-		<menuitem id="menu_gallery_project" name="Gallery" sequence="35" parent="main_menu_gallery_project"/>
+<!--		<menuitem id="main_menu_gallery_project" name="Gallery" sequence="35" groups="base.group_erp_manager,hiworth_project_management.group_manager_office,hiworth_project_management.group_user,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_dgm"/>-->
+<!--		<menuitem id="menu_gallery_project" name="Gallery" sequence="35" parent="main_menu_gallery_project"/>-->
 
-		<menuitem id="sub_menu_gallery_project" name="Gallery" sequence="35" parent="menu_gallery_project" action="action_gallery_project1"/>
-</data>
+<!--		<menuitem id="sub_menu_gallery_project" name="Gallery" sequence="35" parent="menu_gallery_project" action="action_gallery_project1"/>-->
+
+	</data>
 </openerp>

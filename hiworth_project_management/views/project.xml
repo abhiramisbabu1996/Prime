@@ -200,23 +200,23 @@
                  <menuitem name="Personal Site Activities" id="menu_activity_wd"
                      parent="menu_activity_wd_project_main_employee_site" sequence="2" action="action_project_personal_sitevisits_wd" /> -->
 
-		<menuitem 
-				id="menu_project_management_employee_file_details" 
-				name="Customer File Details"
-				parent="menu_external_signup_root_employee" 
-				sequence="20" 
-				/>
+<!--		<menuitem -->
+<!--				id="menu_project_management_employee_file_details" -->
+<!--				name="Customer File Details"-->
+<!--				parent="menu_external_signup_root_employee" -->
+<!--				sequence="20" -->
+<!--				/>-->
 
-		<menuitem 
-				name="My Own File Details" 
-				id="menu_activity_wd_project_main_employee_employee_12351"
-				parent="menu_project_management_employee_file_details" 
-				action="action_customer_file_details" 
-				sequence="1" 
-				/>
+<!--		<menuitem -->
+<!--				name="My Own File Details" -->
+<!--				id="menu_activity_wd_project_main_employee_employee_12351"-->
+<!--				parent="menu_project_management_employee_file_details" -->
+<!--				action="action_customer_file_details" -->
+<!--				sequence="1" -->
+<!--				/>-->
 
-		<menuitem name="Transferred File Details" id="menu_activity_wd_project_main_employee_employee_123"
-				  parent="menu_project_management_employee_file_details" sequence="1" action="action_customer_file_transfer_details" />
+<!--		<menuitem name="Transferred File Details" id="menu_activity_wd_project_main_employee_employee_123"-->
+<!--				  parent="menu_project_management_employee_file_details" sequence="1" action="action_customer_file_transfer_details" />-->
 
 
 
@@ -265,12 +265,12 @@
 		<!-- ################################ -->
 
 		<menuitem id="menu_office_management" name="Office Management" sequence="30" groups="hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.group_user,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_manager_accounts,hiworth_project_management.group_architect,hiworth_project_management.group_dgm,hiworth_project_management.group_am_office"/>
-		<menuitem id="sub_menu_office_management" name="Office Management" parent="menu_office_management" sequence="1"/>
-		<menuitem name="Customer Details" id="customer_details_id_inherit"
-				  parent="sub_menu_office_management" action="action_project_inherit" sequence="2" groups="base.group_erp_manager,hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_manager_accounts,hiworth_project_management.group_dgm"/>
+<!--		<menuitem id="sub_menu_office_management" name="Office Management" parent="menu_office_management" sequence="1"/>-->
+<!--		<menuitem name="Customer Details" id="customer_details_id_inherit"-->
+<!--				  parent="sub_menu_office_management" action="action_project_inherit" sequence="2" groups="base.group_erp_manager,hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_manager_accounts,hiworth_project_management.group_dgm"/>-->
 
-		<menuitem name="Customer Details." id="customeronly_details_id_inherit"
-				  parent="sub_menu_office_management" action="action_project_inherit_customer_only" sequence="2" groups="hiworth_project_management.group_user"/>
+<!--		<menuitem name="Customer Details." id="customeronly_details_id_inherit"-->
+<!--				  parent="sub_menu_office_management" action="action_project_inherit_customer_only" sequence="2" groups="hiworth_project_management.group_user"/>-->
 
 
 		<menuitem name="Project"
@@ -343,10 +343,10 @@
 			<field name="act_window_id" ref="action_project_inherit_site_details" />
 		</record>
 
-		<menuitem name="Locations" id="id_locations_project" parent="menu_office_management" groups="hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_dgm"/>
+<!--		<menuitem name="Locations" id="id_locations_project" parent="menu_office_management" groups="hiworth_project_management.group_manager_office,base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_dgm"/>-->
 
-		<menuitem name="Location Details" id="menu_site_fetails_project"
-				  parent="id_locations_project" action="action_project_inherit_site_details" sequence="6"/>
+<!--		<menuitem name="Location Details" id="menu_site_fetails_project"-->
+<!--				  parent="id_locations_project" action="action_project_inherit_site_details" sequence="6"/>-->
 
 
 		<record id="search_view_work_description" model="ir.ui.view">

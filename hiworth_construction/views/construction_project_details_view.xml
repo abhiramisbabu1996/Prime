@@ -327,40 +327,40 @@
 							</field>
 						</group>
 					</page>
-					<page string="Supervision">
-						<group string="Site Schedule">
-							<field name="schedule_line" nolabel="1" groups="base.group_erp_manager,hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager">
-								<tree editable="bottom">
-									<field name="sequence" widget="handle" />
-									<field name="seq" required="True" />									
-									<field name="name" string="Description of Woks" />
-									<field name="start_date" />
-									<field name="end_date" />
-									<field name="status" />
-									<field name="payment_to_contractor"/>
-									<field name="remarks" />
-								</tree>
-							</field>
-						</group>
-						<group string="Supervision Payment">
-							<field name="supervision_schedule_id" nolabel="1" >
-								<tree editable="bottom">
-									<field name="sequence" widget="handle" />									
-									<field name="seq" required="True" />
-									<!-- <field name="name" required="False"/> -->
-									<!--<field name="amount"/>-->
-									<field name="date"/>
-									<!-- <field name="name" required="True" /> -->
-									<field name="amount" sum="Total" />
-									<!-- <field name="due_on" /> -->
-									<!-- <field name="stage_total" readonly="True" /> -->
-									<field name="payment_stage"/>
-									<field name="remarks"/>
-								</tree>
-							</field>
-						</group>
+<!--					<page string="Supervision">-->
+<!--						<group string="Site Schedule">-->
+<!--							<field name="schedule_line" nolabel="1" groups="base.group_erp_manager,hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager">-->
+<!--								<tree editable="bottom">-->
+<!--									<field name="sequence" widget="handle" />-->
+<!--									<field name="seq" required="True" />									-->
+<!--									<field name="name" string="Description of Woks" />-->
+<!--									<field name="start_date" />-->
+<!--									<field name="end_date" />-->
+<!--									<field name="status" />-->
+<!--									<field name="payment_to_contractor"/>-->
+<!--									<field name="remarks" />-->
+<!--								</tree>-->
+<!--							</field>-->
+<!--						</group>-->
+<!--						<group string="Supervision Payment">-->
+<!--							<field name="supervision_schedule_id" nolabel="1" >-->
+<!--								<tree editable="bottom">-->
+<!--									<field name="sequence" widget="handle" />									-->
+<!--									<field name="seq" required="True" />-->
+<!--									&lt;!&ndash; <field name="name" required="False"/> &ndash;&gt;-->
+<!--									&lt;!&ndash;<field name="amount"/>&ndash;&gt;-->
+<!--									<field name="date"/>-->
+<!--									&lt;!&ndash; <field name="name" required="True" /> &ndash;&gt;-->
+<!--									<field name="amount" sum="Total" />-->
+<!--									&lt;!&ndash; <field name="due_on" /> &ndash;&gt;-->
+<!--									&lt;!&ndash; <field name="stage_total" readonly="True" /> &ndash;&gt;-->
+<!--									<field name="payment_stage"/>-->
+<!--									<field name="remarks"/>-->
+<!--								</tree>-->
+<!--							</field>-->
+<!--						</group>-->
 
-					</page>
+<!--					</page>-->
 
 					<!-- <page string="Account Statement"
 						  groups="project.group_project_manager,hiworth_construction.group_project_management_user">
@@ -382,27 +382,27 @@
 							</group>
 						</group>
 					</page> -->
-					<page string="Payment Schedule">
-						<field name="schedule_id">
-							<tree editable="bottom">
-								<field name="seq" required="True" />
-								<field name="sequence" widget="handle" />
-								<field name="date"/>
-								<!-- <field name="seq" required="True" /> -->
-								<!-- <field name="name" required="True" /> -->
-								<field name="amount" sum="Total" />
-								<!-- <field name="due_on" /> -->
-								<!-- <field name="stage_total" readonly="True" /> -->
-								<field name="payment_stage"/>
-								<field name="remarks"/>
-							</tree>
-						</field>
+<!--					<page string="Payment Schedule">-->
+<!--						<field name="schedule_id">-->
+<!--							<tree editable="bottom">-->
+<!--								<field name="seq" required="True" />-->
+<!--								<field name="sequence" widget="handle" />-->
+<!--								<field name="date"/>-->
+<!--								&lt;!&ndash; <field name="seq" required="True" /> &ndash;&gt;-->
+<!--								&lt;!&ndash; <field name="name" required="True" /> &ndash;&gt;-->
+<!--								<field name="amount" sum="Total" />-->
+<!--								&lt;!&ndash; <field name="due_on" /> &ndash;&gt;-->
+<!--								&lt;!&ndash; <field name="stage_total" readonly="True" /> &ndash;&gt;-->
+<!--								<field name="payment_stage"/>-->
+<!--								<field name="remarks"/>-->
+<!--							</tree>-->
+<!--						</field>-->
 
-						<group>
-							<field name="schedule_note" nolabel="1" placeholder="Note....." />
+<!--						<group>-->
+<!--							<field name="schedule_note" nolabel="1" placeholder="Note....." />-->
 
-						</group>
-					</page>
+<!--						</group>-->
+<!--					</page>-->
 
 					<page string="Work Report"
 						  groups="project.group_project_manager,hiworth_construction.group_estimation_user">

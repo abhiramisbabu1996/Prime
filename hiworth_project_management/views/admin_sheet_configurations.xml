@@ -66,12 +66,12 @@
 			</record>
 
 
-			<menuitem name="Configurations" id="menu_admin_sheet_configurations" action="action_admin_sheet_configuration" groups="base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager" parent="hiworth_project_management.menu_office_management" sequence="150"/>
+<!--			<menuitem name="Configurations" id="menu_admin_sheet_configurations" action="action_admin_sheet_configuration" groups="base.group_erp_manager,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager" parent="hiworth_project_management.menu_office_management" sequence="150"/>-->
 
-			<menuitem name="Configurations" id="submenu_admin_sheet_configurations" parent="menu_admin_sheet_configurations"/>
+<!--			<menuitem name="Configurations" id="submenu_admin_sheet_configurations" parent="menu_admin_sheet_configurations"/>-->
 
 
-			<menuitem name="Access Rights" id="sub_submenu_admin_sheet_configurations" action="action_admin_sheet_configuration" parent="submenu_admin_sheet_configurations"/>
+<!--			<menuitem name="Access Rights" id="sub_submenu_admin_sheet_configurations" action="action_admin_sheet_configuration" parent="submenu_admin_sheet_configurations"/>-->
 
 
 
