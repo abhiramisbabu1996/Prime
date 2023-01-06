@@ -11,7 +11,7 @@
 				<form>
 						
 				<group>
-					<field name="assigned" options="{'no_create':True}" domain="[('partner_id.customer','!=',True)]"/>
+					<field name="assigned"/>
 				
 			     </group>
 				<footer>

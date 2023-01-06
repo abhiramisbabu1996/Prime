@@ -35,7 +35,7 @@
 
 						<group>
   						<group>
-  							<field name="user_id" required="True" readonly="1" />
+<!--  							<field name="user_id" required="True" readonly="1" />-->
   							<field name="allocation_name"/>
   							<!-- <field name="name" required="True" /> -->
               </group>

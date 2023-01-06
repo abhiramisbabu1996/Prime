@@ -871,7 +871,7 @@ class ProjectProject(models.Model):
 			# 'area_limit': vals['area'] or False,
 			'dob':dob,
 			# 'bldng_direction': vals['face_direction'] or False,
-			'manager': vals['user_id'] or False,
+			# 'manager': vals['user_id'] or False,
 			# 'latitude': vals['latitude'] or False,
 			# 'longitude': vals['longitude'] or False,
 			'project_category': vals['project_category'] or False,
@@ -1060,6 +1060,8 @@ class ProjectProject(models.Model):
 	inactive_project = fields.Boolean('Inactive',default=False)
 	is_subproject = fields.Boolean('Is Subproject',default=False)
 	user_part_id = fields.Many2one('res.users'," Customer Users")
+	lead_developer = fields.Many2one('hr.employee','Lead Developer')
+	developer = fields.Many2one('hr.employee','Developer')
 
 	@api.onchange('company_id')
 	def onchange_company_id(self):

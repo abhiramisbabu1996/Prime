@@ -112,7 +112,7 @@
 								</field>
 							</div> -->
 							<newline/>
-							<field name="user_ids" invisible="1" />
+<!--							<field name="user_ids" invisible="1" />-->
 						</group>
 					</group>
 					<group>

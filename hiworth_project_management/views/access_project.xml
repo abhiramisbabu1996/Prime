@@ -88,11 +88,13 @@
 						<group>
 							<field name="start_date"/>
 							<field name="date_end"/>
-							<field name="project_category" String="Partner"/>
-							<field name="location_id" string="Project Location" required="True" />
-						<field name="user_id" string="Project Manager" colspan="2"
-							    required="1"
-							   />
+							<field name="project_category" String="Partner" invisible="1"/>
+							<field name="location_id" string="Project Location" invisible="1"/>
+							<field name="lead_developer"/>
+							<field name="developer"/>
+<!--						<field name="user_id" string="Project Manager" colspan="2"-->
+<!--							    required="1"-->
+<!--							   />-->
 <!--							<field name="building_nature"/>-->
 <!--							<field name="status_pro" invisible="1"/>-->
 <!--							<field name="project_count" invisible="1"/>-->
@@ -313,7 +315,7 @@
 								<field name="name" readonly="1"/>
 								<field name="rev_date"/>
 								<field name="rivision"/>
-								<field name="done_by" domain="[('employee_id','!=',False)]"/>
+								<field name="done_by"/>
 								<field name="remarks"/>
 							</tree>
 						</field>
@@ -329,6 +331,7 @@
 									<field name="company_id" invisible="1"/>
 									<field name="customer_id" invisible="1"/>
 									<field name="name"/>
+<!--									<field name="assigned" widget="many2many_tags"/>-->
 									<field name="assigned" widget="many2many_tags"/>
 									<field name="task_type"/>
 									<field name="date_begin"/>
@@ -342,7 +345,7 @@
 							<tree>
 								<field name="project_id" invisible="1"/>
 								<field name="name" string="Task Name"/>
-								<field name="user_id"/>
+<!--								<field name="user_id"/>-->
 								<field name="civil_contractor" invisible="1"/>
 								<field name="reviewer_id" invisible="1"/>
 								<field name="project_manager" invisible="1"/>
@@ -582,9 +585,9 @@
 					<attribute name="readonly">1</attribute>
 				</xpath>
 
-				<xpath expr="//field[@name='user_id']" position="attributes">
-					<attribute name="readonly">1</attribute>
-				</xpath>
+<!--				<xpath expr="//field[@name='user_id']" position="attributes">-->
+<!--					<attribute name="readonly">1</attribute>-->
+<!--				</xpath>-->
 				<xpath expr="//field[@name='name']" position="attributes">
 					<attribute name="readonly">1</attribute>
 				</xpath>
@@ -604,9 +607,9 @@
 					<attribute name="readonly">0</attribute>
 				</xpath>
 
-				<xpath expr="//field[@name='user_id']" position="attributes">
-					<attribute name="readonly">0</attribute>
-				</xpath>
+<!--				<xpath expr="//field[@name='user_id']" position="attributes">-->
+<!--					<attribute name="readonly">0</attribute>-->
+<!--				</xpath>-->
 				<xpath expr="//field[@name='name']" position="attributes">
 					<attribute name="readonly">0</attribute>
 				</xpath>
@@ -689,10 +692,10 @@
 					<attribute name="readonly">1</attribute>
 
 				</xpath>
-				<xpath expr="//field[@name='user_id']" position="attributes">
-					<attribute name="readonly">1</attribute>
+<!--				<xpath expr="//field[@name='user_id']" position="attributes">-->
+<!--					<attribute name="readonly">1</attribute>-->
 
-				</xpath>
+<!--				</xpath>-->
 				<xpath expr="//field[@name='type']" position="attributes">
 					<attribute name="readonly">1</attribute>
 
@@ -746,10 +749,10 @@
 					<attribute name="readonly">1</attribute>
 
 				</xpath>
-				<xpath expr="//field[@name='user_id']" position="attributes">
-					<attribute name="readonly">1</attribute>
+<!--				<xpath expr="//field[@name='user_id']" position="attributes">-->
+<!--					<attribute name="readonly">1</attribute>-->
 
-				</xpath>
+<!--				</xpath>-->
 				<xpath expr="//field[@name='type']" position="attributes">
 					<attribute name="readonly">1</attribute>
 
@@ -798,10 +801,10 @@
 					<attribute name="readonly">1</attribute>
 
 				</xpath>
-				<xpath expr="//field[@name='user_id']" position="attributes">
-					<attribute name="readonly">1</attribute>
+<!--				<xpath expr="//field[@name='user_id']" position="attributes">-->
+<!--					<attribute name="readonly">1</attribute>-->
 
-				</xpath>
+<!--				</xpath>-->
 				<xpath expr="//field[@name='type']" position="attributes">
 					<attribute name="readonly">1</attribute>
 
@@ -1142,7 +1145,7 @@
 					<separator/>
 					<filter string="New Mail" name="message_unread" domain="[('message_unread','=',True)]"/>
 					<field name="company_id" string="Branch"/>
-					<field name="user_id" string="Project Manager"  />
+<!--					<field name="user_id" string="Project Manager"  />-->
 					<field name="partner_id" string="Contact" filter_domain="[('partner_id', 'child_of', self)]"/>
 					<filter string="My Project" name="my_projects" domain="[('user_id','=',uid)]"/>
 					<group expand="0" string="Group By">
