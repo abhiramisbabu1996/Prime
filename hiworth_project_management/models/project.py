@@ -380,7 +380,7 @@ class EventEvent(models.Model):
 		vals = super(EventEvent, self).default_get(default_fields)
 		if vals.get('project_id'):
 			project = self.env['project.project'].browse(vals.get('project_id'))
-			vals['project_manager'] = project.user_id.id
+			# vals['project_manager'] = project.user_id.id
 			vals['civil_contractor'] = project.partner_id.id
 		if vals.get('date_end'):
 			# self.date = dateutil.parser.parse(self.date_end).date() 
@@ -410,24 +410,24 @@ class EventEvent(models.Model):
 									 _('Already some task is assigned for this time slot. Do you want to continue...!!!'))
 
 
-	@api.onchange('user_id','user_ids','project_id')
-	def onchange_user_id_pro(self):
-		ids = []
-		record = False
-		if self.env.context.get('default_project_id'):
-			record = self.env['project.project'].sudo().browse(self.env.context.get('default_project_id'))
-		if self.project_id:
-			self.project_manager = self.project_id.user_id.id
-			self.civil_contractor = self.project_id.partner_id.id
-			if self.env.context.get('default_project_id'):
-				record = self.env['project.project'].sudo().search([('id','=',self.env.context.get('default_project_id'))])
-			else:
-				record = self.env['project.project'].sudo().search([('id','=',self.project_id.id)])
-		if record:
-			for item in record.members:
-				ids.append(item.id)
-		if self.activity == False and self.site_visit == False:
-			return {'domain': {'user_id': [('id', 'in', ids)], 'user_ids': [('id', 'in', ids)]}}
+	# @api.onchange('user_id','user_ids','project_id')
+	# def onchange_user_id_pro(self):
+	# 	ids = []
+	# 	record = False
+	# 	if self.env.context.get('default_project_id'):
+	# 		record = self.env['project.project'].sudo().browse(self.env.context.get('default_project_id'))
+	# 	if self.project_id:
+	# 		self.project_manager = self.project_id.user_id.id
+	# 		self.civil_contractor = self.project_id.partner_id.id
+	# 		if self.env.context.get('default_project_id'):
+	# 			record = self.env['project.project'].sudo().search([('id','=',self.env.context.get('default_project_id'))])
+	# 		else:
+	# 			record = self.env['project.project'].sudo().search([('id','=',self.project_id.id)])
+	# 	if record:
+	# 		for item in record.members:
+	# 			ids.append(item.id)
+	# 	if self.activity == False and self.site_visit == False:
+	# 		return {'domain': {'user_id': [('id', 'in', ids)], 'user_ids': [('id', 'in', ids)]}}
 
 	@api.one
 	def button_draft(self):
