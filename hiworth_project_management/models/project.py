@@ -874,7 +874,7 @@ class ProjectProject(models.Model):
 			# 'manager': vals['user_id'] or False,
 			# 'latitude': vals['latitude'] or False,
 			# 'longitude': vals['longitude'] or False,
-			# 'project_category': vals['project_category'] or False,
+			'project_category': vals['project_category'] or False,
 			# 'branch': vals['company_id'] or False,
 		})
 		result['job_assignment'] = rec.id
@@ -959,7 +959,7 @@ class ProjectProject(models.Model):
 				'partner_id':self.partner_id.id,
 				'start_date':self.start_date,
 				'date_end':self.date_end,
-				# 'project_category':self.project_category.id,
+				'project_category':self.project_category.id,
 				'company_id':self.company_id.id,
 				'face_direction':self.face_direction.id,
 				'area':self.area,
