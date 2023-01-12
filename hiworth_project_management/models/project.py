@@ -652,9 +652,9 @@ class EventEvent(models.Model):
 	def create(self, vals):
 
 		then = datetime.strptime(vals.get('date_begin'),'%Y-%m-%d %H:%M:%S').date()
-		if then<datetime.now().date():
-			raise except_orm(_('Warning'),
-							 _('You Can not create task on this start date..!!'))
+		# if then<datetime.now().date():
+		# 	raise except_orm(_('Warning'),
+		# 					 _('You Can not create task on this start date..!!'))
 		if vals.get('user_ids'):
 			if vals.get('user_ids')[0][2]:
 				vals['user_id'] = vals.get('user_ids')[0][2][0]
@@ -1510,7 +1510,7 @@ class ManagerCharge(models.Model):
 	_name = 'manager.charge'
 
 	manager = fields.Many2one('res.users','Project Manager')
-	project_category = fields.Many2one('project.category','Project Category',required=True)
+	project_category = fields.Many2one('project.category','Project Category')
 	branch = fields.Many2one('res.company',string="Branch",required=True,readonly=True)
 	rec = fields.Many2one('job.assignment')
 	project_name = fields.Char('Project Name')
