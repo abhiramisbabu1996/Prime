@@ -124,7 +124,7 @@ class TaskWizardLine(models.Model):
 
 	@api.multi
 	def button_save(self):
-		print "Save"
+		print("Save")
 
 class DayAbstractWizard(models.Model):
 	_name = 'day.abstract.wizard'
@@ -687,13 +687,13 @@ class EventEvent(models.Model):
 			result.company_id = result.project_id.company_id.id
 		temp = False
 		user_list = [i.id for i in result.user_ids]
-		print 'test=====================1'
+		# print'test=====================1'
 		for user in result.user_ids:
 			if temp == False:
 				result.user_id = user.id
 				temp = True
 			if user.id != result.user_id.id:
-				print 'test=====================2'
+				# print 'test=====================2'
 				values = {
 					'wd_id': result.wd_id.id,
 					'name': result.name,
@@ -712,7 +712,7 @@ class EventEvent(models.Model):
 					'project_id': result.project_id.id,
 				}
 				copy = super(EventEvent, self).create(values)
-				print 'copy==================================',copy
+				# print 'copy==================================',copy
 				# super(EventEvent, self).create(vals)
 				if copy.activity == True:
 					popup = self.env['popup.notifications'].create({
@@ -732,7 +732,7 @@ class EventEvent(models.Model):
 					copy.company_id = copy.wd_id.branch_name.id
 				else:
 					copy.company_id = copy.project_id.company_id.id
-		print 'user_ids========================', result.user_ids
+		# print 'user_ids========================', result.user_ids
 		return result
 
 
@@ -743,7 +743,7 @@ class EventEvent(models.Model):
 		if vals.get('date_begin'):
 			then = datetime.strptime(vals.get('date_begin'),'%Y-%m-%d %H:%M:%S').date()
 			if then<datetime.now().date():
-				print '=================================test'
+				# print '=================================test'
 				raise except_orm(_('Warning'),
 								 _('You Can not create task on this start date..!!'))
 		if self.popup_id:
@@ -775,9 +775,9 @@ class EventEvent(models.Model):
 				event.date_end = vals.get('date_end')
 			if vals.get('location') and not vals.get('user_ids'):
 				event.location = vals.get('location')
-		if vals.get('user_ids'):
-			raise except_orm(_('Warning'),
-							 _('If you want to change users then delete this record and create new one.!!'))
+		# if vals.get('user_ids'):
+		# 	raise except_orm(_('Warning'),
+		# 					 _('If you want to change users then delete this record and create new one.!!'))
 
 		result = super(EventEvent, self).write(vals)
 
