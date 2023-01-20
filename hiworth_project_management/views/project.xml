@@ -39,7 +39,7 @@
 						<group>
 							<separator string="Client Details"/><newline/>
 							<newline/><field name="nick_name" groups="hiworth_project_management.make_invisible_in_nickname"/>
-
+							<field name="is_a_client" string="Is A Client ?"/>
 							<label for="days and dobm" string="Dob"/>
 							<div>
 								<field name="days"  string ="Dob" class="oe_inline" />-<field name="dobm" class="oe_inline" />-<field name="years" class="oe_inline" />

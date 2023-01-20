@@ -516,7 +516,7 @@
 						<label for="partner_id" string="Customer" />
 						<h1>
 							<field name="partner_id" on_change="onchange_partner_id(partner_id)"
-							   colspan="2" string="Customer" />
+							   colspan="2" string="Customer Name" domain="[('is_a_client','=', True)]" />
 						</h1>
 						<div name="options_active" invisible="1">
 							<field name="use_tasks" class="oe_inline" />

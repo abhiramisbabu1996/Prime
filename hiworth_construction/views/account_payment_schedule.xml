@@ -19,7 +19,7 @@
 					<field name="state" widget="statusbar" statusbar_visible="draft,open,approve,paid"
 						statusbar_colors='{"proforma":"blue","proforma2":"blue"}' invisible="1"/>
 					<group col="4">
-						<field name="partner_id" on_change="onchange_partner_id(partner_id)" string="Customer"/>
+						<field name="partner_id" on_change="onchange_partner_id(partner_id)" string="Customer/Client Name" domain="[('is_a_client','=', True)]"/>
 					</group>
 					<notebook>
 <!--						<page string="Payment Schedule">-->

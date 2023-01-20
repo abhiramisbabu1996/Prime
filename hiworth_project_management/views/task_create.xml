@@ -35,9 +35,9 @@
 
 
 
-		  <menuitem action="create_task_wizard" id="id_create_task" name="Create Tasks"
-            parent="event.menu_event_event" sequence="1"
-            groups="project.group_project_manager,base.group_erp_manager,hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_dgm"/>
+<!--		  <menuitem action="create_task_wizard" id="id_create_task" name="Create Tasks"-->
+<!--            parent="event.menu_event_event" sequence="1"-->
+<!--            groups="project.group_project_manager,base.group_erp_manager,hiworth_project_management.group_manager_office,hiworth_project_management.group_admin2,hiworth_project_management.group_general_manager,hiworth_project_management.group_dgm"/>-->
 
 
 

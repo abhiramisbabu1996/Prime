@@ -86,6 +86,7 @@
 				<xpath expr="//group[1]" position="after">
 					<group string="Project Details" >
 						<group>
+							<field name="user_id" string="Project Manager"/>
 							<field name="start_date"/>
 							<field name="date_end"/>
 							<field name="project_category" String="Partner" invisible="1"/>
@@ -177,16 +178,16 @@
 			<field name="field_parent">child_ids</field>
 			<field name="inherit_id" ref="project.view_project" />
 			<field name="arch" type="xml">
-				<xpath expr="//field[@name='name']" position="after">
-					<field name="customer_nick_name"/>
-				</xpath>
+<!--				<xpath expr="//field[@name='name']" position="after">-->
+<!--					<field name="customer_nick_name"/>-->
+<!--				</xpath>-->
 				<tree position="attributes">
 					<attribute name="fonts">bold:id==False</attribute>
 				</tree>
 				<field name="partner_id" position="replace">
 					<field name="partner_id" invisible="1"/>
 					<field name="is_subproject" invisible="1"/>
-					<field name="sup_project_description" attrs="{'invisible':[('is_subproject','!=',True)]}"/>
+<!--					<field name="sup_project_description" attrs="{'invisible':[('is_subproject','!=',True)]}"/>-->
 				</field>
 <!--				<field name="partner_id" position="after">-->
 <!--					<field name="sup_project_description"/>-->
@@ -348,7 +349,7 @@
 <!--								<field name="user_id"/>-->
 								<field name="civil_contractor" invisible="1"/>
 								<field name="reviewer_id" invisible="1"/>
-								<field name="project_manager" invisible="1"/>
+								<field name="project_manager"/>
 								<field name="date_begin"/>
 								<field name="report_time"/>
 								<field name="date_end"/>
